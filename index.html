@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Victor Renan A. Oliveira">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./libraries/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <title>MyBITS</title>
+</head>
+
+<body>
+    <!-- Barra de navegação-->
+    <nav>
+        <a href="index.html" class="nav__logo">
+            <img src="./images/logo.png" class="nav__logo__icon" alt="MyBITS Logo">
+            <h1 class="nav__logo__title">MyBITS</h1>
+        </a>
+        <!--Botão do menu -> efetua a troca de class "active"-->
+        <button class="nav__menu-btn">
+            <i class="nav__menu-btn__icon mdi mdi-menu"></i>
+        </button>
+        <span class="nav__items">
+            <a class="nav__link" href="#informacoes">Informações</a>
+            <a class="nav__link" href="#sobre">Sobre</a>
+            <a class="nav__link" target="_blank" href="http://www.eeepvalternunes.com.br">EEEP Valter Nunes</a>
+            <span class="nav__container--social">
+                <a class="nav__link--social" href="https://www.facebook.com/inforedes.eeepvna/">
+                    <i class="nav__icon--social mdi mdi-facebook"></i>
+                </a>
+                <a class="nav__link--social" href="https://www.instagram.com/informatica.eeepvalter/">
+                    <i class="nav__icon--social mdi mdi-instagram"></i>
+                </a>
+            </span>
+        </span>
+    </nav>
+    <!-- Conteúdo -->
+    <main>
+        <section id="informacoes">
+            <h1 class="info__title">Informações e status</h1>
+            <span class="info__container--envio">
+                <h1 class="info__container__title--envio">Altura do reservatório (cm)</h1>
+                <input type="number" class="info__input" name="valor-sangramento" id="valor-sangramento" value="50">
+                <button id="enviar-valor-sensor" class="info__btn">Enviar</button>
+            </span>
+            <span class="info__container">
+                <iframe class="info__graph" width="450" height="260"
+                    src="https://thingspeak.com/channels/1910675/charts/2?bgcolor=%23ffffff&color=%23698121&dynamic=true&results=60&type=line"></iframe>
+                <div class="info__percent">
+                    <h1 class="info__percent__title">Porcentagem do nível do reservatório</h1>
+                    <span class="info__percent__text">
+                        <i class="info__icon--percent mdi mdi-waves-arrow-up"></i>
+                        <p class="info__percent__value">0%</p>
+                    </span>
+                    <p class="info__percent__alert">Atenção!!! Risco de </p>
+                </div>
+            </span>
+        </section>
+        <section id="sobre">
+            <h1 class="sobre__title">Sobre o projeto</h1>
+            <div class="sobre__container">
+                <img class="sobre__img" src="./images/foto-do-projeto.jpg" alt="Foto do projeto">
+                <div class="sobre__text">
+                    <p class="sobre__text__p">A maioria das cidades do interior nordestino possuem um reservatório que as abastece por inteiro. Esses
+                        reservatórios são majoritariamente de grande porte e estão submetidos aos fenômenos da variação do clima
+                        regional, o que pode acarretar problemas seríssimos à população, ora no tocante às enchentes provocadas
+                        pelo rompimento de suas “paredes” devido fortes chuvas, ora pelo mal racionamento da água, que se torna
+                        escassa enquanto não jaz a época do inverno. Em observância a esses dois extremos a equipe desenvolveu o
+                        projeto MyBITS, buscando meios que fornecessem informações da eminência desses casos aos moradores,
+                        utilizando da robótica atrelada às tecnologias de IoT (Internet of Things), o que favorece uma melhor
+                        resolução dos impasses, além de contribuir com os órgãos hídricos locais.</p>
+                </div>
+            </div>
+            <h2 class="sobre__title--desenv">Equipe de desenvolvimento:</h2>
+            <ul class="sobre__list">
+                <li class="sobre__list__item">Luis Lourenço de Oliveira Filho <b>(1)</b></li>
+                <li class="sobre__list__item">Bernardo Paulino Alves <b>(2)</b></li>
+                <li class="sobre__list__item">Victor Renan Alves de Oliveira <b>(2)</b></li>
+                <li class="sobre__list__item">Antonio Felipe Amarante Rodrigues <b>(2)</b></li>
+            </ul>
+            <ol class="sobre__legend">
+                <li class="sobre__legend__item">Professor da <b>EEEP Valter Nunes de Alencar</b></li>
+                <li class="sobre__legend__item">Alunos da <b>EEEP Valter Nunes de Alencar</b></li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <img class="footer__icon" src="./images/logo.png" alt="Logo do projeto">
+        <div class="footer__container">
+            <p class="footer__p">&copy;2022 - <b>Projeto MyBITS</b>, Todos os direitos reservados.</p>
+            <p class="footer__p">EEEP Valter Nunes de Alencar, Araripe, CE.</p>
+        </div>
+    </footer>
+    <!-- Dependências -->
+    <script src="./libraries/jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+
+</html>
